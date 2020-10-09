@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/action_airplane1"
+    android:enabled="true"
+    android:drawable="@drawable/firstmenuimg"
+    android:title="홈"/>
+
+    <item
+        android:id="@+id/action_airplane2"
+        android:enabled="true"
+        android:drawable="@drawable/secondmenuimg"
+        android:title="냉장고 현황"/>
+
+    <item
+        android:id="@+id/action_airplane3"
+        android:enabled="true"
+        android:drawable="@drawable/thirdmenuimg"
+        android:title="레시피 추천"/>
+
+</menu>

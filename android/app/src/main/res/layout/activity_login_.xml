@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/login_Id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:hint="아이디"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <EditText
+        android:id="@+id/login_Pw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/login_Id"
+        app:layout_constraintTop_toBottomOf="@+id/login_Id" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="로그인"
+        app:layout_constraintEnd_toEndOf="@+id/login_Pw"
+        app:layout_constraintStart_toStartOf="@+id/login_Pw"
+        app:layout_constraintTop_toBottomOf="@+id/autologin" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="회원가입"
+        app:layout_constraintEnd_toEndOf="@+id/login"
+        app:layout_constraintStart_toStartOf="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/login" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/login_Id"
+        app:layout_constraintEnd_toStartOf="@+id/login_Id"
+        app:layout_constraintTop_toTopOf="@+id/login_Id"
+        app:srcCompat="@drawable/ic_baseline_account_box_24" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="42dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/login_Pw"
+        app:layout_constraintEnd_toStartOf="@+id/login_Pw"
+        app:layout_constraintTop_toTopOf="@+id/login_Pw"
+        app:srcCompat="@drawable/ic_baseline_vpn_key_24" />
+
+    <CheckBox
+        android:id="@+id/autologin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="자동 로그인"
+        app:layout_constraintEnd_toEndOf="@+id/login_Pw"
+        app:layout_constraintStart_toStartOf="@+id/login_Pw"
+        app:layout_constraintTop_toBottomOf="@+id/login_Pw" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="418dp"
+        android:layout_height="360dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
