@@ -30,10 +30,25 @@ def cropMarker(boxSize):
 
 #가장 선명한 이미지 검출
 def clearImageSerch(imageList):
-    img=imageList[1]
-    gray =cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-    value=cv2.Laplacian(gray,cv2.cv_64F).var()
-    print("선명도 ="+value)
+#선명도 숫자
+    bestClearImageV=0
+#선명한 이미지 번호
+    bestClearImageN=0
+
+    #선명도를 저장하고 더 높은게 있으면V N업데이트
+    
+    for i in range(len(imageList)) :
+        img=imageList[i]
+        gray =cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+        value=cv2.Laplacian(gray,cv2.CV_64F).var()
+        if bestClearImageV ==0 or value>bestClearImageV:
+            bestClearImageN =i
+            bestClearImageV=value
+   
+
+    print("선명한이미지탐색완료")
+    print(bestClearImageV)
+    cv2.imshow("imagelist[bestClearImageN]",ArrayImage[bestClearImageN])
 
 #영상 송출( 보여주기 위함 실제 작동필요x)
 while True:
